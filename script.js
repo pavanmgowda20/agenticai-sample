@@ -35,28 +35,33 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCountdown();
   const countdownInterval = setInterval(updateCountdown, 1000);
 
-  // 3. Tab Navigation for Committees
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
+  // 3. Tab Navigation for Committees & Schedule
+  function setupTabs(containerSelector) {
+    const container = document.querySelector(containerSelector);
+    if (!container) return;
+    const buttons = container.querySelectorAll('.tab-btn');
+    const contents = container.querySelectorAll('.tab-content');
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const targetTab = button.getAttribute('data-tab');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetTab = button.getAttribute('data-tab');
 
-      // Update active button
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
 
-      // Update active content panel
-      tabContents.forEach(content => {
-        if (content.getAttribute('id') === targetTab) {
-          content.classList.add('active');
-        } else {
-          content.classList.remove('active');
-        }
+        contents.forEach(content => {
+          if (content.getAttribute('id') === targetTab) {
+            content.classList.add('active');
+          } else {
+            content.classList.remove('active');
+          }
+        });
       });
     });
-  });
+  }
+
+  setupTabs('.committees-container');
+  setupTabs('.schedule-container');
 
   // 4. Header Scroll State
   const header = document.getElementById('site-header');

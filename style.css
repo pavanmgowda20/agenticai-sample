@@ -292,11 +292,12 @@ header.scrolled {
 }
 
 .hero-grid {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
-  z-index: 1;
+  z-index: 3;
 }
 
 .hero-content {
@@ -329,6 +330,7 @@ header.scrolled {
 }
 
 .hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 4.2rem;
   font-weight: 800;
   line-height: 1.15;
@@ -543,13 +545,12 @@ header.scrolled {
 .countdown-box {
   display: flex;
   gap: 1.25rem;
-  background: rgba(0, 28, 61, 0.4);
-  backdrop-filter: blur(10px);
-  border: var(--border-glass);
+  background: #000c1a !important; /* Solid dark navy background for 100% visibility against white fade background */
+  border: 2px solid var(--accent-cyan) !important; /* Strong cyan neon border */
   padding: 1.25rem 2rem;
   border-radius: 16px;
   width: max-content;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 0 25px rgba(56, 189, 248, 0.15) !important;
 }
 
 .countdown-item {
@@ -561,26 +562,27 @@ header.scrolled {
 
 .countdown-val {
   font-family: var(--font-display);
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--accent-cyan);
-  text-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+  font-size: 2.0rem; /* Slightly reduced size */
+  font-weight: 800;
+  color: #38bdf8 !important; /* Solid bright cyan */
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.5) !important; /* Strong glow */
 }
 
 .countdown-lbl {
-  font-size: 0.65rem;
-  color: var(--color-text-muted);
+  font-size: 0.7rem; /* Slightly reduced labels */
+  color: #ffffff !important; /* Solid white label for maximum readability */
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   margin-top: 0.25rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .countdown-divider {
   font-family: var(--font-display);
-  font-size: 1.8rem;
-  color: rgba(255, 255, 255, 0.15);
+  font-size: 2.0rem; /* Slightly reduced divider size */
+  color: var(--accent-cyan) !important; /* Glowing cyan divider */
   align-self: center;
+  opacity: 0.8;
 }
 
 /* --- ABOUT SECTION --- */
@@ -820,9 +822,11 @@ header.scrolled {
 }
 
 .committee-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .committee-card {
@@ -837,6 +841,29 @@ header.scrolled {
   transition: var(--transition-smooth);
   position: relative;
   overflow: hidden;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+/* Hierarchy Group Styles */
+.hierarchy-group {
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.hierarchy-group:last-child {
+  margin-bottom: 0;
+}
+
+.hierarchy-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .committee-card:hover {
@@ -921,6 +948,116 @@ header.scrolled {
   color: var(--color-text-secondary);
   line-height: 1.4;
   max-width: 200px;
+}
+
+/* --- SCHEDULE / EVENT FLOW --- */
+.schedule-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-flow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.1);
+  flex-shrink: 0;
+}
+
+.light-section .timeline-badge, .light-section-alt .timeline-badge {
+  background: #ffffff;
+  border: 1px solid rgba(0, 24, 51, 0.08);
+  color: #0f172a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.timeline-card {
+  flex-grow: 1;
+  background: var(--bg-card);
+  border: var(--border-glass);
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.light-section .timeline-card, .light-section-alt .timeline-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 24, 51, 0.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+}
+
+.timeline-card:hover {
+  transform: translateX(5px);
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.08);
+}
+
+.timeline-topic {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+.light-section .timeline-topic, .light-section-alt .timeline-topic {
+  color: #0f172a;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timeline-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  background: rgba(56, 189, 248, 0.08);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.light-section .timeline-tag, .light-section-alt .timeline-tag {
+  background: rgba(56, 189, 248, 0.06);
+  color: #0369a1;
+  border-color: rgba(56, 189, 248, 0.2);
+}
+
+.schedule-tba-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 /* --- VENUE SECTION --- */
@@ -1215,6 +1352,10 @@ footer {
   color: #64748b;
 }
 
+.light-section .hierarchy-title, .light-section-alt .hierarchy-title {
+  color: #475569;
+}
+
 /* Sponsors Partner Custom Badge Icon Colors */
 .icon-platinum {
   color: #e2e8f0;
@@ -1358,7 +1499,10 @@ footer {
 }
 
 .light-section .venue-title-text, .light-section-alt .venue-title-text {
-  color: #0f172a;
+  color: #001833 !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+  -webkit-background-clip: unset !important;
 }
 
 .light-section .venue-address, .light-section-alt .venue-address {
@@ -1486,13 +1630,20 @@ footer {
     width: 100%;
   }
   .countdown-box {
-    padding: 1rem;
+    padding: 1rem 1.25rem;
+    gap: 0.75rem;
   }
   .countdown-val {
-    font-size: 1.4rem;
+    font-size: 1.6rem !important;
   }
   .countdown-item {
-    min-width: 45px;
+    min-width: 48px;
+  }
+  .countdown-lbl {
+    font-size: 0.65rem !important;
+  }
+  .countdown-divider {
+    font-size: 1.6rem !important;
   }
   .tab-buttons {
     flex-direction: column;

@@ -19,8 +19,8 @@
       <nav class="nav-links">
         <a href="#hero" class="active">Home</a>
         <a href="#about">About</a>
-        <a href="#sponsors">Sponsors</a>
-        <a href="#internships">Internships</a>
+        <a href="#sponsors">Sponsorship</a>
+        <a href="#schedule">Schedule</a>
         <a href="#speakers">Speakers</a>
         <a href="#committees">Committees</a>
         <a href="#venue">Venue</a>
@@ -59,7 +59,7 @@
           </div>
           <div class="hero-detail-item">
             <i data-lucide="map-pin"></i>
-            <span>Bangalore, India & Hybrid</span>
+            <span>Bangalore & Hybrid</span>
           </div>
         </div>
         
@@ -122,6 +122,9 @@
         <p>
           Participants will gain practical insights from leading professionals, network globally, and develop skills to build and deploy next-generation AI agents. The IEEE AgenticAI Summit 2026 is the place where ideas meet innovation, shaping the future of autonomous intelligence.
         </p>
+        <p style="font-weight: 700; color: #001833; margin-top: 1.5rem;">
+          Registrations open. Limited seats available for in-person attendance.
+        </p>
       </div>
     </div>
   </section>
@@ -129,77 +132,126 @@
   <!-- --- SPONSORS & PARTNERS --- -->
   <section id="sponsors" class="light-section-alt">
     <div class="container">
-      <h2>Sponsors & Partners</h2>
+      <h2>Sponsorship Options</h2>
       <p class="section-subtitle">
-        Position your brand at the forefront of the autonomous AI paradigm shift. Join our cohort of forward-thinking sponsors.
+        Position your brand at the forefront of the autonomous AI paradigm shift. Join our cohort of forward-thinking partners.
       </p>
       
       <div class="card-grid">
+        <!-- Platinum Sponsor -->
         <div class="empty-card sponsor-card-platinum">
           <div class="empty-card-icon">
             <i data-lucide="award" class="icon-platinum"></i>
           </div>
           <h3 class="empty-card-title">Platinum Sponsor</h3>
-          <p class="empty-card-desc">Elite tier featuring prime keynote slot, double booth space, and global branding coverage.</p>
-          <a href="mailto:partners@agenticaisummit.org?subject=Platinum Sponsor Inquiry" class="empty-card-action">Apply Now</a>
+          <p class="empty-card-price" style="font-size: 1.25rem; font-weight: 700; color: #001833; margin: 0.5rem 0;">1500$ + GST</p>
+          <p class="empty-card-desc">Premium placement including dedicated panels, main floor booth, and attendee list access.</p>
+          <a href="mailto:ieeeagenticai@gmail.com?subject=Platinum Sponsor Inquiry" class="empty-card-action">Apply Now</a>
         </div>
         
+        <!-- Gold Sponsor -->
         <div class="empty-card sponsor-card-gold">
           <div class="empty-card-icon">
             <i data-lucide="award" class="icon-gold"></i>
           </div>
           <h3 class="empty-card-title">Gold Sponsor</h3>
-          <p class="empty-card-desc">Premium placement including dedicated panels, main floor booth, and attendee list access.</p>
-          <a href="mailto:partners@agenticaisummit.org?subject=Gold Sponsor Inquiry" class="empty-card-action">Apply Now</a>
+          <p class="empty-card-price" style="font-size: 1.25rem; font-weight: 700; color: #001833; margin: 0.5rem 0;">750$ + GST</p>
+          <p class="empty-card-desc">Standard branding, recruitment networking access, and shared ecosystem pavilion booth.</p>
+          <a href="mailto:ieeeagenticai@gmail.com?subject=Gold Sponsor Inquiry" class="empty-card-action">Apply Now</a>
         </div>
         
+        <!-- Start-up/Academia partner -->
         <div class="empty-card">
           <div class="empty-card-icon">
-            <i data-lucide="award" class="icon-silver"></i>
+            <i data-lucide="rocket" style="color: var(--accent-cyan);"></i>
           </div>
-          <h3 class="empty-card-title">Silver Sponsor</h3>
-          <p class="empty-card-desc">Standard branding, recruitment networking access, and shared ecosystem pavilion booth.</p>
-          <a href="mailto:partners@agenticaisummit.org?subject=Silver Sponsor Inquiry" class="empty-card-action">Apply Now</a>
+          <h3 class="empty-card-title">Start-up/Academia Partner</h3>
+          <p class="empty-card-price" style="font-size: 1.25rem; font-weight: 700; color: #001833; margin: 0.5rem 0;">500$ + GST</p>
+          <p class="empty-card-desc">Special exhibition package for early-stage startups and academic organizations to showcase research.</p>
+          <a href="mailto:ieeeagenticai@gmail.com?subject=Start-up/Academia Partner Inquiry" class="empty-card-action">Apply Now</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- --- INTERNSHIP PARTNERS --- -->
-  <section id="internships" class="light-section">
+  <!-- --- SCHEDULE SECTION --- -->
+  <section id="schedule" class="light-section">
     <div class="container">
-      <h2>Internship Partners</h2>
-      <p class="section-subtitle">
-        Connecting the next generation of engineers with industry leaders building autonomous loops. Inquire for partner slots.
-      </p>
-      
-      <div class="card-grid">
-        <div class="empty-card">
-          <div class="empty-card-icon">
-            <i data-lucide="graduation-cap"></i>
-          </div>
-          <h3 class="empty-card-title">AI Research Lab</h3>
-          <p class="empty-card-desc">Focus on LLM planning architectures, task decomposition, and memory retention optimization.</p>
-          <a href="mailto:internships@agenticaisummit.org?subject=Research Lab Internship Partner" class="empty-card-action">Register Slot</a>
+      <h2>Event Schedule</h2>
+      <div class="schedule-container">
+        <!-- Tab Selectors for Day 1 & Day 2 -->
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="day1">Day 1 - Hands-on</button>
+          <button class="tab-btn" data-tab="day2">Day 2 - Industry talks</button>
         </div>
-        
-        <div class="empty-card">
-          <div class="empty-card-icon">
-            <i data-lucide="briefcase"></i>
+
+        <!-- Day 1 Agenda Content -->
+        <div id="day1" class="tab-content active">
+          <div class="timeline-flow">
+            
+            <!-- Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-badge">1</div>
+              <div class="timeline-card">
+                <h4 class="timeline-topic">Multi-Agent Systems and Workflow Orchestration</h4>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-badge">2</div>
+              <div class="timeline-card">
+                <h4 class="timeline-topic">Building On-Device Agents in Android</h4>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item">
+              <div class="timeline-badge">3</div>
+              <div class="timeline-card">
+                <h4 class="timeline-topic">Saving the Tokens — Efficient Agent Design</h4>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="timeline-item">
+              <div class="timeline-badge">4</div>
+              <div class="timeline-card">
+                <h4 class="timeline-topic">RL Fine-Tuning Methods for Agents</h4>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="timeline-item">
+              <div class="timeline-badge">5</div>
+              <div class="timeline-card">
+                <h4 class="timeline-topic">Deploying Agents and RAG in Amazon Bedrock</h4>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="timeline-item">
+              <div class="timeline-badge">6</div>
+              <div class="timeline-card">
+                <h4 class="timeline-topic">Software Platform Panel</h4>
+              </div>
+            </div>
+
           </div>
-          <h3 class="empty-card-title">Enterprise Systems</h3>
-          <p class="empty-card-desc">Work on autonomous agent workflows, enterprise CRM orchestration, and database scaling.</p>
-          <a href="mailto:internships@agenticaisummit.org?subject=Enterprise Systems Internship Partner" class="empty-card-action">Register Slot</a>
         </div>
-        
-        <div class="empty-card">
-          <div class="empty-card-icon">
-            <i data-lucide="laptop"></i>
+
+        <!-- Day 2 Agenda Content -->
+        <div id="day2" class="tab-content">
+          <div class="empty-card schedule-tba-card">
+            <div class="speaker-avatar-slot" style="width: 75px; height: 75px; font-size: 1.5rem; margin-bottom: 1.25rem; background: rgba(56, 189, 248, 0.08);">
+              <i data-lucide="calendar-clock"></i>
+            </div>
+            <h3 class="empty-card-title">Day 2 Flow - To Be Announced</h3>
+            <p class="empty-card-desc">Detailed Day 2 agenda and workshops will be released shortly. Stay tuned!</p>
+            <a href="mailto:ieeeagenticai@gmail.com?subject=Schedule Inquiry" class="empty-card-action">Inquire Agenda</a>
           </div>
-          <h3 class="empty-card-title">Developer Tooling</h3>
-          <p class="empty-card-desc">Build open-source SDKs, visualization dashboards, and debugging suites for complex agent nets.</p>
-          <a href="mailto:internships@agenticaisummit.org?subject=Developer Tooling Internship Partner" class="empty-card-action">Register Slot</a>
         </div>
+
       </div>
     </div>
   </section>
@@ -211,43 +263,19 @@
       <p class="section-subtitle">
         Hear from the architects and visionaries defining the benchmarks for autonomous intelligence.
       </p>
-      
-      <div class="card-grid">
-        <!-- Speaker 1 Placeholder -->
-        <div class="empty-card speaker-card-placeholder">
-          <div class="speaker-avatar-slot">
-            <i data-lucide="user"></i>
-          </div>
-          <h3 class="empty-card-title">Keynote Speaker I</h3>
-          <p class="empty-card-desc">Pioneering researcher in LLM self-alignment and agent planning structures. To be revealed.</p>
-          <a href="#speakers" class="empty-card-action">Reveal Soon</a>
+      <div class="empty-card" style="max-width: 500px; margin: 2.5rem auto 0; padding: 3rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div class="speaker-avatar-slot" style="width: 75px; height: 75px; font-size: 1.5rem; margin-bottom: 1.25rem; background: rgba(56, 189, 248, 0.08);">
+          <i data-lucide="megaphone"></i>
         </div>
-        
-        <!-- Speaker 2 Placeholder -->
-        <div class="empty-card speaker-card-placeholder">
-          <div class="speaker-avatar-slot">
-            <i data-lucide="user"></i>
-          </div>
-          <h3 class="empty-card-title">Keynote Speaker II</h3>
-          <p class="empty-card-desc">Lead architect behind global multi-agent orchestration frameworks in production. To be revealed.</p>
-          <a href="#speakers" class="empty-card-action">Reveal Soon</a>
-        </div>
-        
-        <!-- Speaker 3 Placeholder -->
-        <div class="empty-card speaker-card-placeholder">
-          <div class="speaker-avatar-slot">
-            <i data-lucide="user"></i>
-          </div>
-          <h3 class="empty-card-title">Keynote Speaker III</h3>
-          <p class="empty-card-desc">Policy advisor focused on safety guardrails, governance, and ethical agent operation. To be revealed.</p>
-          <a href="#speakers" class="empty-card-action">Reveal Soon</a>
-        </div>
+        <h3 class="empty-card-title">Speakers to be announced</h3>
+        <p class="empty-card-desc">The official lineup of keynote speakers and panels will be published shortly. Early notifications will be sent to registered attendees.</p>
+        <a href="mailto:ieeeagenticai@gmail.com?subject=Speaker Nomination / Inquiry" class="empty-card-action">Inquire Speaker Lineup</a>
       </div>
     </div>
   </section>
 
   <!-- --- COMMITTEES SECTION --- -->
-  <section id="committees" class="light-section">
+  <section id="committees" class="light-section-alt">
     <div class="container">
       <h2>Summit Committees</h2>
       <p class="section-subtitle">
@@ -263,136 +291,189 @@
 
         <!-- Organising Committee Content -->
         <div id="organising" class="tab-content active">
-          <div class="committee-grid">
-            
-            <!-- Dr. Madhan Raj K -->
-            <div class="committee-card">
-              <p class="member-role">General Chair</p>
-              <div class="member-image-wrapper">
-                <img src="assets/madan.png" alt="Dr. Madhan Raj K" class="member-image">
+          
+          <!-- General Chairs Group -->
+          <div class="hierarchy-group">
+            <h3 class="hierarchy-title">General Chairs</h3>
+            <div class="committee-grid">
+              <!-- Dr. Madhan Raj K -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/madan.png" alt="Dr. Madhan Raj K" class="member-image">
+                </div>
+                <h4 class="member-name">Dr. Madhan Raj K</h4>
+                <p class="member-designation">Samsung R&D Institute India</p>
               </div>
-              <h4 class="member-name">Dr. Madhan Raj K</h4>
-              <p class="member-designation">Samsung R&D Institute India</p>
-            </div>
 
-            <!-- Anindya Saha -->
-            <div class="committee-card">
-              <p class="member-role">General Chair</p>
-              <div class="member-image-wrapper">
-                <img src="assets/anindhya.png" alt="Anindya Saha" class="member-image">
+              <!-- Anindya Saha -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/anindhya.png" alt="Anindya Saha" class="member-image">
+                </div>
+                <h4 class="member-name">Anindya Saha</h4>
+                <p class="member-designation">VP, Wireless Group & CTO Office, Tejas Networks</p>
               </div>
-              <h4 class="member-name">Anindya Saha</h4>
-              <p class="member-designation">VP, Wireless Group & CTO Office, Tejas Networks</p>
             </div>
-
-            <!-- Dr. Chitradeep Majumdar -->
-            <div class="committee-card">
-              <p class="member-role">Technical Program Chair</p>
-              <div class="member-image-wrapper">
-                <img src="assets/chitradeep.png" alt="Dr. Chitradeep Majumdar" class="member-image">
-              </div>
-              <h4 class="member-name">Dr. Chitradeep Majumdar</h4>
-              <p class="member-designation">Senior Research Specialist, Nokia Standards</p>
-            </div>
-
-            <!-- Dr. Shreevyas -->
-            <div class="committee-card">
-              <p class="member-role">Government & AI Liaison</p>
-              <div class="member-image-wrapper">
-                <img src="assets/Dr.Shreevyas-3.jpeg" alt="Dr. Shreevyas" class="member-image">
-              </div>
-              <h4 class="member-name">Dr. Shreevyas</h4>
-              <p class="member-designation">Government & AI Ecosystem Liaison</p>
-            </div>
-
-            <!-- Muzammil Pasha -->
-            <div class="committee-card">
-              <p class="member-role">Operations Chair</p>
-              <div class="member-image-wrapper">
-                <img src="assets/operations chair.png" alt="Muzammil Pasha" class="member-image">
-              </div>
-              <h4 class="member-name">Muzammil Pasha</h4>
-              <p class="member-designation">Founding Chair - IEEE Entrepreneurship</p>
-            </div>
-
-            <!-- Aniruddh Koundinya -->
-            <div class="committee-card">
-              <p class="member-role">Young Professional's Chair</p>
-              <div class="member-image-wrapper">
-                <img src="assets/anirudh.png" alt="Aniruddh Koundinya" class="member-image">
-              </div>
-              <h4 class="member-name">Aniruddh Koundinya</h4>
-              <p class="member-designation">Consultant, CGI & Chair-Elect, IEEE YP</p>
-            </div>
-
-            <!-- Dr. Yathindra -->
-            <div class="committee-card">
-              <p class="member-role">Sponsorship Chair</p>
-              <div class="member-image-wrapper">
-                <img src="assets/yathindranath.jpeg" alt="Dr. Yathindra" class="member-image">
-              </div>
-              <h4 class="member-name">Dr. Yathindra</h4>
-              <p class="member-designation">Chair, Startups & Industry Connections, IEEE TEMS</p>
-            </div>
-
-            <!-- Johnviston Dias -->
-            <div class="committee-card">
-              <p class="member-role">Publicity Chair</p>
-              <div class="member-image-wrapper">
-                <img src="assets/john.PNG" alt="Johnviston Dias" class="member-image">
-              </div>
-              <h4 class="member-name">Johnviston Dias</h4>
-              <p class="member-designation">Aumovio</p>
-            </div>
-
-            <!-- Pavan -->
-            <div class="committee-card">
-              <p class="member-role">Website Chair</p>
-              <div class="member-image-wrapper">
-                <img src="assets/Pavan M.jpg" alt="Pavan M" class="member-image">
-              </div>
-              <h4 class="member-name">Pavan M</h4>
-              <p class="member-designation">InUnity</p>
-            </div>
-
-            <!-- Rakshitha M B -->
-            <div class="committee-card">
-              <p class="member-role">Design & Creatives Lead</p>
-              <div class="member-image-wrapper">
-                <img src="assets/rakshitha.png" alt="Rakshitha M B" class="member-image">
-              </div>
-              <h4 class="member-name">Rakshitha M B</h4>
-              <p class="member-designation">Design & Creatives Lead</p>
-            </div>
-
           </div>
+
+          <!-- Technical Chairs Group -->
+          <div class="hierarchy-group">
+            <h3 class="hierarchy-title">Technical Chairs</h3>
+            <div class="committee-grid">
+              <!-- Dr. Chitradeep Majumdar -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/chitradeep.png" alt="Dr. Chitradeep Majumdar" class="member-image" style="transform: scale(1.3); transform-origin: center;">
+                </div>
+                <h4 class="member-name">Dr. Chitradeep Majumdar</h4>
+                <p class="member-designation">Senior Research Specialist, Nokia Standards</p>
+              </div>
+
+              <!-- Anup Rani -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/anup rani.jpeg" alt="Anup Rani" class="member-image">
+                </div>
+                <h4 class="member-name">Anup Rani</h4>
+                <p class="member-designation">Director, HW Fleet Engineering, Microsoft</p>
+              </div>
+
+              <!-- Dr. Shreevyas -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/Dr.Shreevyas-3.jpeg" alt="Dr. Shreevyas" class="member-image">
+                </div>
+                <h4 class="member-name">Dr. Shreevyas</h4>
+                <p class="member-designation">Government & AI Ecosystem Liaison</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Finance Chair Group -->
+          <div class="hierarchy-group">
+            <h3 class="hierarchy-title">Finance Chair</h3>
+            <div class="committee-grid">
+              <!-- Dr. Vishal Rathod -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/vishalrathod.jpeg" alt="Dr. Vishal Rathod" class="member-image">
+                </div>
+                <h4 class="member-name">Dr. Vishal Rathod</h4>
+                <p class="member-designation">Secretary, IEEE Bangalore Section</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Operations Chair Group -->
+          <div class="hierarchy-group">
+            <h3 class="hierarchy-title">Operations Chair</h3>
+            <div class="committee-grid">
+              <!-- Muzammil Pasha -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/operations chair.png" alt="Muzammil Pasha" class="member-image">
+                </div>
+                <h4 class="member-name">Muzammil Pasha</h4>
+                <p class="member-designation">Founding Chair - IEEE Entrepreneurship</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Young Professional's Chair Group -->
+          <div class="hierarchy-group">
+            <h3 class="hierarchy-title">Young Professional's Chair</h3>
+            <div class="committee-grid">
+              <!-- Aniruddh Koundinya -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/anirudh.png" alt="Aniruddh Koundinya" class="member-image">
+                </div>
+                <h4 class="member-name">Aniruddh Koundinya</h4>
+                <p class="member-designation">Consultant, CGI & Chair-Elect, IEEE YP</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sponsorship Chair Group -->
+          <div class="hierarchy-group">
+            <h3 class="hierarchy-title">Sponsorship Chair</h3>
+            <div class="committee-grid">
+              <!-- Dr. Yathindra -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/yathindranath.jpeg" alt="Dr. Yathindra" class="member-image">
+                </div>
+                <h4 class="member-name">Dr. Yathindra</h4>
+                <p class="member-designation">Chair, Startups & Industry Connections, IEEE TEMS</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Publicity Chair Group -->
+          <div class="hierarchy-group">
+            <h3 class="hierarchy-title">Publicity Chair</h3>
+            <div class="committee-grid">
+              <!-- Johnviston Dias -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/john.PNG" alt="Johnviston Dias" class="member-image">
+                </div>
+                <h4 class="member-name">Johnviston Dias</h4>
+                <p class="member-designation">Aumovio</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Website Chair Group -->
+          <div class="hierarchy-group">
+            <h3 class="hierarchy-title">Website Chair</h3>
+            <div class="committee-grid">
+              <!-- Pavan M -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/Pavan M.jpg" alt="Pavan M" class="member-image">
+                </div>
+                <h4 class="member-name">Pavan M</h4>
+                <p class="member-designation">InUnity</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design & Creatives Lead Group -->
+          <div class="hierarchy-group">
+            <h3 class="hierarchy-title">Design & Creatives Lead</h3>
+            <div class="committee-grid">
+              <!-- Rakshitha M B -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/rakshitha.png" alt="Rakshitha M B" class="member-image">
+                </div>
+                <h4 class="member-name">Rakshitha M B</h4>
+                <p class="member-designation">Design & Creatives Lead</p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- Advisory Committee Content -->
         <div id="advisory" class="tab-content">
-          <div class="committee-grid">
-            
-            <!-- Dr. Prasant Misra -->
-            <div class="committee-card">
-              <p class="member-role">Advisory Committee</p>
-              <div class="member-image-wrapper">
-                <img src="assets/prasant misra.jpeg" alt="Dr. Prasant Misra" class="member-image">
+          
+          <!-- Advisory Committee Group -->
+          <div class="hierarchy-group">
+            <h3 class="hierarchy-title">Advisory Committee</h3>
+            <div class="committee-grid">
+              <!-- Dr. Prasant Misra -->
+              <div class="committee-card">
+                <div class="member-image-wrapper">
+                  <img src="assets/prasant misra.jpeg" alt="Dr. Prasant Misra" class="member-image">
+                </div>
+                <h4 class="member-name">Dr. Prasant Misra</h4>
+                <p class="member-designation">Chair, IEEE Bangalore Section</p>
               </div>
-              <h4 class="member-name">Dr. Prasant Misra</h4>
-              <p class="member-designation">Chair, IEEE Bangalore Section</p>
             </div>
-
-            <!-- Dr. Vishal Rathod -->
-            <div class="committee-card">
-              <p class="member-role">Advisory Committee</p>
-              <div class="member-image-wrapper">
-                <img src="assets/vishalrathod.jpeg" alt="Dr. Vishal Rathod" class="member-image">
-              </div>
-              <h4 class="member-name">Dr. Vishal Rathod</h4>
-              <p class="member-designation">Secretary, IEEE Bangalore Section</p>
-            </div>
-
           </div>
+
         </div>
 
       </div>
@@ -400,7 +481,7 @@
   </section>
 
   <!-- --- VENUE SECTION --- -->
-  <section id="venue" class="light-section-alt">
+  <section id="venue" class="light-section">
     <div class="container">
       <h2>Venue Details</h2>
       <p class="section-subtitle">
@@ -414,20 +495,19 @@
             <div class="venue-map-grid"></div>
             <div class="venue-map-marker">
               <div class="venue-marker-pulse"></div>
-              <span class="venue-marker-label">BANGALORE, INDIA (TBD)</span>
+              <span class="venue-marker-label">BANGALORE</span>
             </div>
           </div>
           
           <div class="venue-details-panel">
             <span class="venue-label">Event Venue</span>
-            <h3 class="venue-title-text">Yet to Announce</h3>
+            <h3 class="venue-title-text">Bangalore</h3>
             <p class="venue-address">
-              Bangalore, Karnataka, India
+              Karnataka, India
             </p>
             <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
               The official convention venue and map coordinates will be published shortly. Early partners and attendees will receive direct notifications.
             </p>
-            <a href="mailto:venue@agenticaisummit.org?subject=Venue Status Inquiry" class="empty-card-action">Inquire Venue Status</a>
           </div>
         </div>
       </div>
@@ -440,7 +520,7 @@
       <div class="footer-content">
         <div class="footer-brand">
           <span>IEEE AgenticAI Summit 2026</span>
-          <p>Co-shaping the cognitive automation frontier.</p>
+          <p>Advancing the frontier of autonomous intelligence — IEEE AgenticAI Summit, October 30–31, 2026, Bangalore.</p>
         </div>
         <div class="footer-socials">
           <a href="#" class="social-icon"><i data-lucide="twitter"></i></a>
@@ -454,7 +534,7 @@
         <div class="footer-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
-          <a href="mailto:info@agenticaisummit.org">Contact Us</a>
+          <a href="mailto:Madhan.raj@ieee.org">Contact Us</a>
         </div>
       </div>
     </div>
