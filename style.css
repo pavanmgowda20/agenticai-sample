@@ -266,14 +266,14 @@ header.scrolled {
   transform: none;
 }
 
-/* Smooth fade out to white bottom transition */
+/* Smooth fade from hero dark to white sections — starts below the countdown timer */
 .hero-section::after {
   content: '';
   position: absolute;
-  bottom: -1px; /* overlap slightly to prevent hairline borders */
+  bottom: -1px;
   left: 0;
   width: 100%;
-  height: 200px;
+  height: 80px;
   background: linear-gradient(to bottom, transparent, #ffffff);
   pointer-events: none;
   z-index: 2;
@@ -359,6 +359,7 @@ header.scrolled {
 .hero-desc {
   margin-bottom: 2rem;
   max-width: 520px;
+  color: #ffffff;
 }
 
 .hero-details {
@@ -372,7 +373,8 @@ header.scrolled {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--color-text-secondary);
+  color: #f8fafc; /* Make it a brighter, high contrast off-white */
+  font-weight: 700;
 }
 
 .hero-detail-item i {
@@ -518,6 +520,74 @@ header.scrolled {
   pointer-events: none;
   z-index: 2;
   opacity: 0.4;
+}
+
+/* Round Starting Soon Stamp Overlay */
+.starting-soon-stamp {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #002247 0%, #000a18 100%);
+  border: 2px dashed var(--accent-cyan);
+  outline: 2px solid rgba(56, 189, 248, 0.3);
+  outline-offset: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 
+    0 0 20px rgba(56, 189, 248, 0.4),
+    0 8px 25px rgba(0, 0, 0, 0.6);
+  transform: rotate(-12deg);
+  animation: stampSlam 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s backwards;
+  transition: var(--transition-smooth);
+}
+
+@keyframes stampSlam {
+  0% {
+    opacity: 0;
+    transform: scale(3.5) rotate(-35deg);
+    filter: blur(8px);
+    box-shadow: 0 0 0 rgba(56, 189, 248, 0);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(0.88) rotate(-12deg);
+    filter: blur(0px);
+    box-shadow: 
+      0 0 35px rgba(56, 189, 248, 0.8),
+      0 12px 30px rgba(0, 0, 0, 0.8);
+  }
+  82% {
+    transform: scale(1.08) rotate(-12deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-12deg);
+    box-shadow: 
+      0 0 20px rgba(56, 189, 248, 0.4),
+      0 8px 25px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.starting-soon-stamp .stamp-text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.72rem;
+  line-height: 1.15;
+  color: var(--accent-cyan);
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
+
+.video-container-wrapper:hover .starting-soon-stamp {
+  transform: rotate(0deg) scale(1.08);
+  border-color: var(--accent-pink);
+  outline-color: rgba(249, 115, 22, 0.4);
 }
 
 /* Glow ring effects */
