@@ -1,7 +1,7 @@
 {
-  "name": "agentic-ai-summit-2026",
+  "name": "ieee-agenticai-summit-2026",
   "version": "1.0.0",
-  "description": "Landing page for Agentic AI Summit 2026",
+  "description": "Landing page for IEEE AgenticAI Summit 2026",
   "main": "index.html",
   "scripts": {
     "dev": "vite --host",
