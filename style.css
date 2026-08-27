@@ -912,6 +912,7 @@ header.scrolled {
   position: relative;
   overflow: hidden;
   width: 280px;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -1686,6 +1687,14 @@ footer {
   .footer-links {
     justify-content: center;
   }
+  .committee-grid {
+    gap: 1.5rem;
+    width: 100%;
+  }
+  .committee-card {
+    width: 100%;
+    max-width: 340px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1721,5 +1730,10 @@ footer {
   }
   .tab-btn {
     width: 100%;
+  }
+  .committee-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.75rem 1.25rem;
   }
 }

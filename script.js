@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   
+  // 0. Reset Scroll Position to Top Landing Page on Refresh
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+  }
+
   // 1. Initialize Lucide Icons
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
