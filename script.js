@@ -86,20 +86,39 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', checkScroll);
   checkScroll(); // Run once in case user starts refreshed partway down
 
-  // 5. Scroll Animations (Intersection Observer)
+  // 5. Scroll Animations (Intersection Observer) & Auto Horizontal Nav Scroll
   const sections = document.querySelectorAll('section');
+  const allNavLinks = document.querySelectorAll('.nav-links a');
+
+  function activateNavLink(navLink) {
+    if (!navLink) return;
+    allNavLinks.forEach(a => a.classList.remove('active'));
+    navLink.classList.add('active');
+    
+    // Auto-scroll horizontal navbar to center active section link
+    navLink.scrollIntoView({
+      behavior: 'smooth',
+      inline: 'center',
+      block: 'nearest'
+    });
+  }
+
+  allNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      activateNavLink(link);
+    });
+  });
   
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
         
-        // Find links in header and update active state
+        // Find link in header and update active state + auto horizontal scroll
         const id = entry.target.getAttribute('id');
         const navLink = document.querySelector(`.nav-links a[href="#${id}"]`);
         if (navLink) {
-          document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-          navLink.classList.add('active');
+          activateNavLink(navLink);
         }
       }
     });
